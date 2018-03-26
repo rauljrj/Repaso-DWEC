@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Relacion 2</title>
+</head>
+<script src="relacion2.js"></script>
+<body>
+<h1>Agenda</h1>
+    <h3>Introducir nuevo contacto</h3>
+    <form>
+        <label>
+            <a>Nombre: </a>
+            <input id="nombre" type="text">
+        </label><br>
+
+        <label>
+            <a>Direccion: </a>
+            <input id="direccion" type="text">
+        </label><br>
+
+        <label>
+            <a>Telefono: </a>
+            <input id="telefono" type="text">
+        </label><br>
+
+        <label>
+            <a>Email: </a>
+            <input id="email" type="text">
+        </label><br><hr>
+
+        <input type="button" value="Introducir nuevo contacto" onclick="agenda.introducirContacto(
+            document.getElementById('#nombre'),
+            document.getElementById('#direccion'),
+            document.getElementById('#telefono'),
+            document.getElementById('#email'))">
+    </form>
+    
+    <h3>Mostrar todos los contactos</h3>
+    <input type="button" onclick="agenda.mostrarTodos()" value="Mostrar todos los contactos">
+    <div id="todos"></div>
+
+    <h3>Eliminar contacto</h3>
+    <p>Introduce el nombre del contacto que deseas eliminar</p>
+    <div id="borrar">
+        <label>
+            <a>Nombre a borrar: </a>
+            <input id="borrar"type="text">
+        </label>
+        <input type="button" value="eliminar contacto" onclick="agenda.borrarContacto(document.getElementById('#borrar'))">
+        <div id="eliminado"></div>
+    </div>
+
+
+<div>
+    <h2>Buscar contacto:</h2>
+    <p>Introduce el nombre del contacto que quieres buscar:</p>
+    <div id="buscar">
+        <label>
+            <a>Nombre de contacto a buscar: </a>
+            <input id="buscarContacto" type="text">
+        </label>
+        <input type="button" value="Buscar contacto" onclick="agenda.mostrarContacto(document.getElementById('#buscarContacto'))">
+    </div>
+    <div id="encontrado"></div>
+</div>
+</body>
+</html>
